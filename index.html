@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Golden Leap School | Creche &amp; Preschool in West Adenta, Accra</title>
+<meta name="description" content="Golden Leap School (GLS), Hallelujah Broadway, West Adenta: creche and preschool for 3 months to 6 years. British and GES curriculum, early drop-off and late pick-up. Achieving Excellence Together.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,600&family=Nunito:wght@400;600;700&display=swap">
+<style>
+/* Brand from THEIR flyers + logo: indigo GLS (#2a2661), the six logo stars (magenta, lime, sky, yellow, pink, orange),
+   lilac and pink classroom walls. Layout adapted from Morrow (framed photo hero, floating pill nav with "Book a visit",
+   italic accent word, highlight card) + playful floating stars/toys for a children's school. Single light theme. */
+:root {
+  --indigo: #2a2661;
+  --indigo-deep: #1c1947;
+  --magenta: #c8197f;
+  --pink: #f06aa8;
+  --orange: #f39a2b;
+  --yellow: #f7cf3b;
+  --sky: #2fa7e0;
+  --lime: #9fcd3b;
+  --lilac: #efe7fb;
+  --blush: #fde8f2;
+  --cream: #fffdf8;
+  --ink: #211f3a;
+  --mute: #5f5c78;
+  --line: #e7e1f3;
+  --head: "Baloo 2", "Segoe UI", system-ui, sans-serif;
+  --accent: "Fraunces", Georgia, serif;
+  --text: "Nunito", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { background: var(--cream); color: var(--ink); font: 400 17px/1.6 var(--text); overflow-x: hidden; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--magenta); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1220px; margin: 0 auto; padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3, .btn, .eyebrow { font-family: var(--head); }
+em.acc { font-family: var(--accent); font-style: italic; font-weight: 600; color: var(--magenta); letter-spacing: -.01em; }
+
+.demo { background: var(--indigo-deep); color: #fff; font-size: 13px; text-align: center; padding: 8px 12px; }
+
+/* floating stars from the logo */
+.star { position: absolute; width: var(--s, 22px); height: var(--s, 22px); color: var(--c, var(--yellow)); animation: bob 5s ease-in-out infinite; animation-delay: var(--d, 0s); pointer-events: none; }
+.star svg { width: 100%; height: 100%; }
+@keyframes bob { 50% { transform: translateY(-12px) rotate(14deg); } }
+
+/* HERO (Morrow) */
+.hero { position: relative; margin: 14px max(14px, env(safe-area-inset-left, 0px)) 0; border-radius: 30px; overflow: hidden; min-height: min(88vh, 820px); display: flex; align-items: flex-end; isolation: isolate; }
+.hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(28,25,71,.15) 0%, rgba(28,25,71,0) 28%, rgba(28,25,71,.55) 55%, rgba(28,25,71,.88) 100%); }
+.pill { position: absolute; top: 14px; left: 14px; right: 14px; display: flex; align-items: center; justify-content: space-between; gap: 14px; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); border-radius: 18px; padding: 8px 8px 8px 14px; z-index: 3; }
+.pill .logo img { height: 52px; width: auto; }
+.pill nav { display: flex; gap: 24px; font-weight: 700; font-size: 15px; color: var(--indigo); }
+.pill nav a { text-decoration: none; }
+.pill nav a:hover { color: var(--magenta); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 16px; padding: 12px 22px; border-radius: 14px; border: 2px solid var(--indigo); background: var(--indigo); color: #fff; text-decoration: none; cursor: pointer; line-height: 1.1; }
+.btn:hover { background: var(--magenta); border-color: var(--magenta); }
+.btn.light { background: #fff; color: var(--indigo); border-color: #fff; }
+.btn.light:hover { background: var(--yellow); border-color: var(--yellow); }
+.btn.ghost { background: transparent; color: var(--indigo); }
+.btn.ghost:hover { background: var(--indigo); color: #fff; }
+.hero-in { width: 100%; display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; padding: 0 40px 40px; color: #fff; }
+.kicker { display: flex; align-items: center; gap: 10px; font: 700 13px/1 var(--head); letter-spacing: .18em; text-transform: uppercase; margin-bottom: 14px; }
+.kicker::before { content: ""; width: 32px; height: 2px; background: var(--yellow); }
+.hero h1 { font-weight: 800; font-size: clamp(42px, 6.4vw, 88px); line-height: .95; margin: 0 0 14px; max-width: 13ch; letter-spacing: -.01em; }
+.hero h1 em.acc { color: var(--yellow); }
+.hero p { max-width: 44ch; margin: 0 0 22px; font-size: 18px; color: #f1eefc; }
+.hero .ctas { display: flex; gap: 10px; flex-wrap: wrap; }
+.card { flex: 0 0 300px; background: #fff; color: var(--ink); border-radius: 22px; padding: 10px; box-shadow: 0 20px 50px rgba(0,0,0,.3); }
+.card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 14px; }
+.card small { display: block; font: 700 11px/1 var(--head); letter-spacing: .16em; text-transform: uppercase; color: var(--magenta); margin: 12px 8px 4px; }
+.card b { display: block; font: 800 22px/1.1 var(--head); color: var(--indigo); margin: 0 8px; }
+.card span { display: block; font-size: 14px; color: var(--mute); margin: 4px 8px 8px; }
+
+section { position: relative; padding-block: 100px; }
+.eyebrow { display: inline-block; font-weight: 700; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; color: var(--magenta); background: var(--blush); padding: 6px 14px; border-radius: 999px; margin-bottom: 14px; }
+h2 { font-weight: 800; font-size: clamp(34px, 4.4vw, 56px); line-height: 1; letter-spacing: -.01em; margin: 0; color: var(--indigo); text-wrap: balance; }
+.sub { color: var(--mute); margin: 12px 0 0; max-width: 56ch; }
+
+/* why GLS: four flyer facts */
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+.fact { border-radius: 26px; padding: 26px 24px 28px; position: relative; overflow: hidden; }
+.fact:nth-child(1) { background: #e9f6fd; } .fact:nth-child(2) { background: #fff4d6; } .fact:nth-child(3) { background: var(--blush); } .fact:nth-child(4) { background: #eef7dc; }
+.fact .ic { width: 54px; height: 54px; border-radius: 16px; display: grid; place-items: center; color: #fff; margin-bottom: 16px; }
+.fact:nth-child(1) .ic { background: var(--sky); } .fact:nth-child(2) .ic { background: var(--orange); } .fact:nth-child(3) .ic { background: var(--magenta); } .fact:nth-child(4) .ic { background: var(--lime); }
+.fact .ic svg { width: 28px; height: 28px; }
+.fact b { display: block; font: 800 28px/1.05 var(--head); color: var(--indigo); }
+.fact p { margin: 8px 0 0; color: var(--mute); font-size: 15px; }
+
+/* inside: lilac playful band */
+.inside { background: var(--lilac); border-radius: 40px; margin-inline: max(14px, env(safe-area-inset-left, 0px)); overflow: hidden; }
+.blob { position: absolute; border-radius: 50%; opacity: .55; pointer-events: none; }
+.toys { position: absolute; inset: 0; pointer-events: none; }
+.gallery { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 150px; gap: 14px; margin-top: 40px; position: relative; }
+.gallery figure { margin: 0; border-radius: 22px; overflow: hidden; background: #fff; box-shadow: 0 10px 30px rgba(42,38,97,.12); }
+.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.gallery figure:hover img { transform: scale(1.04); }
+.g1 { grid-column: 1 / 7; grid-row: 1 / 4; } .g2 { grid-column: 7 / 10; grid-row: 1 / 3; } .g3 { grid-column: 10 / 13; grid-row: 1 / 4; } .g4 { grid-column: 7 / 10; grid-row: 3 / 4; }
+.g5 { grid-column: 1 / 5; grid-row: 4 / 6; } .g6 { grid-column: 5 / 9; grid-row: 4 / 6; } .g7 { grid-column: 9 / 13; grid-row: 4 / 6; }
+
+/* manners */
+.manners { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.manners img { width: 100%; aspect-ratio: 4 / 3.2; object-fit: cover; border-radius: 30px 30px 30px 120px; }
+.manners ul { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 12px; }
+.manners li { display: flex; gap: 12px; align-items: flex-start; }
+.manners li i { flex: 0 0 26px; height: 26px; border-radius: 9px; background: var(--yellow); color: var(--indigo); display: grid; place-items: center; font-style: normal; font-weight: 800; font-family: var(--head); }
+
+/* reviews */
+.reviews { background: var(--indigo); color: #fff; border-radius: 40px; margin-inline: max(14px, env(safe-area-inset-left, 0px)); overflow: hidden; }
+.reviews h2 { color: #fff; }
+.reviews .eyebrow { background: rgba(255,255,255,.12); color: var(--yellow); }
+.score { display: flex; align-items: baseline; gap: 14px; margin: 26px 0 30px; }
+.score b { font: 800 72px/1 var(--head); color: var(--yellow); }
+.score span { color: #d9d6f2; }
+.quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; position: relative; }
+blockquote { margin: 0; background: #fff; color: var(--ink); border-radius: 24px; padding: 28px; position: relative; }
+blockquote::before { content: "\201C"; position: absolute; top: -18px; left: 22px; font: 800 80px/1 var(--accent); color: var(--pink); }
+blockquote p { margin: 0 0 14px; font-size: 19px; }
+blockquote cite { font: 700 14px/1 var(--head); font-style: normal; color: var(--magenta); }
+
+/* enrol */
+.enrol { display: grid; grid-template-columns: .9fr 1.1fr; gap: 50px; align-items: start; }
+.steps { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 14px; counter-reset: s; }
+.steps li { display: flex; gap: 14px; align-items: flex-start; counter-increment: s; }
+.steps li::before { content: counter(s); flex: 0 0 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: var(--magenta); color: #fff; font: 800 18px/1 var(--head); }
+.steps li:nth-child(2)::before { background: var(--orange); } .steps li:nth-child(3)::before { background: var(--sky); }
+.steps b { display: block; font: 800 19px/1.2 var(--head); color: var(--indigo); }
+form.req { background: #fff; border: 2px solid var(--line); border-radius: 30px; padding: 30px; display: grid; gap: 14px; box-shadow: 0 20px 50px rgba(42,38,97,.08); }
+.req label { display: grid; gap: 6px; font: 700 15px/1.2 var(--head); color: var(--indigo); }
+.req input, .req select, .req textarea { font: 400 16px/1.4 var(--text); padding: 13px 14px; border: 2px solid var(--line); border-radius: 14px; background: var(--cream); color: var(--ink); }
+.req input:focus, .req select:focus, .req textarea:focus { border-color: var(--magenta); outline: none; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.note { font-size: 14px; color: var(--mute); margin: 0; }
+
+/* visit */
+.visit { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.visit img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 30px; }
+.lines { display: grid; gap: 8px; margin: 18px 0 24px; }
+.lines span b { color: var(--indigo); }
+.hourcard { display: inline-flex; gap: 12px; align-items: center; background: #fff4d6; border-radius: 18px; padding: 12px 16px; font-weight: 700; color: var(--indigo); margin-top: 6px; }
+.hourcard i { width: 10px; height: 10px; border-radius: 50%; background: #999; }
+.hourcard.open i { background: #2e9a54; box-shadow: 0 0 0 5px rgba(46,154,84,.2); }
+.acts { display: flex; gap: 10px; flex-wrap: wrap; }
+
+footer { background: var(--indigo-deep); color: #cfcbea; padding-block: 40px 110px; margin-top: 40px; }
+footer .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
+footer img { height: 56px; width: auto; background: #fff; border-radius: 14px; padding: 6px 10px; }
+
+.dock { position: fixed; left: 0; right: 0; bottom: 0; display: none; gap: 8px; padding: 10px max(14px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(14px, env(safe-area-inset-left, 0px)); background: rgba(255,253,248,.95); backdrop-filter: blur(8px); border-top: 1px solid var(--line); z-index: 8; }
+.dock .btn { flex: 1; }
+
+@media (max-width: 980px) {
+  .facts { grid-template-columns: repeat(2, 1fr); }
+  .card { display: none; }
+}
+@media (max-width: 860px) {
+  .pill nav { display: none; }
+  .pill .logo img { height: 44px; }
+  .hero { min-height: 640px; border-radius: 24px; }
+  .hero-in { padding: 0 22px 28px; }
+  .manners, .enrol, .visit, .quotes { grid-template-columns: 1fr; gap: 28px; }
+  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
+  .gallery figure { grid-column: auto !important; grid-row: auto !important; }
+  .gallery figure.g1, .gallery figure.g3 { grid-column: span 2 !important; grid-row: span 2 !important; }
+  .gallery { grid-auto-flow: dense; }
+  section { padding-block: 64px; }
+  .inside, .reviews { border-radius: 28px; padding-inline: 4px; }
+  form.req { padding: 22px; }
+  .dock { display: flex; }
+}
+@media (max-width: 520px) { .facts { grid-template-columns: 1fr; } .row2 { grid-template-columns: 1fr; } .pill .btn { padding: 10px 14px; font-size: 14px; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+<style>body{margin:0}</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="st" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.8l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9l7.1-.6z"/></symbol></defs></svg>
+
+<div class="demo">Demo website made for Golden Leap School. Details to be confirmed by you.</div>
+
+<div class="hero" id="top">
+  <img src="img/room-wide.webp" alt="A bright Golden Leap School classroom with colourful tables, chairs and toys" width="1080" height="676">
+  <div class="pill">
+    <a class="logo" href="#top" aria-label="Golden Leap School home"><img src="img/logo.png" alt="Golden Leap School: Achieving Excellence Together" width="525" height="474"></a>
+    <nav aria-label="Sections"><a href="#why">Why GLS</a><a href="#inside">Inside</a><a href="#reviews">Parents</a><a href="#visit">Find us</a></nav>
+    <a class="btn" href="#enrol">Book a visit</a>
+  </div>
+  <span class="star" style="--c:var(--yellow);--s:30px;left:8%;top:22%"><svg><use href="#st"/></svg></span>
+  <span class="star" style="--c:var(--pink);--s:22px;left:46%;top:30%;--d:-1.5s"><svg><use href="#st"/></svg></span>
+  <span class="star" style="--c:var(--sky);--s:26px;right:9%;top:24%;--d:-3s"><svg><use href="#st"/></svg></span>
+  <div class="hero-in">
+    <div>
+      <div class="kicker">Creche &amp; preschool · West Adenta</div>
+      <h1>Where little ones <em class="acc">leap.</em></h1>
+      <p>Warm, safe, colourful classrooms for children from 3 months to 6 years. British and GES curriculum, with early drop-off and late pick-up for working parents.</p>
+      <div class="ctas"><a class="btn light" href="#enrol">Book a visit</a><a class="btn light" href="tel:+233558144504" style="background:transparent;color:#fff">Call 055 814 4504</a></div>
+    </div>
+    <div class="card">
+      <img src="img/room-lilac.webp" alt="Lilac classroom with a toy shelf, easel and small tables" loading="lazy">
+      <small>Now enrolling</small>
+      <b>3 months – 6 years</b>
+      <span>Spaces open for the new term. Come and see the classrooms.</span>
+    </div>
+  </div>
+</div>
+
+<section id="why">
+  <span class="star" style="--c:var(--orange);--s:26px;right:6%;top:70px"><svg><use href="#st"/></svg></span>
+  <span class="star" style="--c:var(--lime);--s:20px;left:4%;top:120px;--d:-2s"><svg><use href="#st"/></svg></span>
+  <div class="wrap">
+    <span class="eyebrow">Why parents choose GLS</span>
+    <h2>Big care for <em class="acc">little</em> learners</h2>
+    <p class="sub">Achieving Excellence Together: we work hand in hand with parents so every child grows in confidence, manners and learning.</p>
+    <div class="facts">
+      <div class="fact"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg></div><b>3 months – 6 years</b><p>From creche to kindergarten, under one roof.</p></div>
+      <div class="fact"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h7a3 3 0 013 3v12a2 2 0 00-2-2H4zM20 5h-7a3 3 0 00-3 3v12a2 2 0 012-2h8z"/></svg></div><b>British &amp; GES</b><p>A blend of British and Ghana Education Service curriculum.</p></div>
+      <div class="fact"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><b>6:30 am – 5:30 pm</b><p>Early drop-off and late pick-up, Monday to Friday.</p></div>
+      <div class="fact"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 11l9-7 9 7v9a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><path d="M9 21v-6h6v6"/></svg></div><b>Spacious classrooms</b><p>Bright, air-conditioned rooms full of toys.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="inside" class="inside">
+  <div class="blob" style="width:340px;height:340px;background:#f9c9e0;right:-90px;top:-90px"></div>
+  <div class="blob" style="width:260px;height:260px;background:#d5ecfa;left:-80px;bottom:-60px"></div>
+  <div class="toys" aria-hidden="true">
+    <span class="star" style="--c:var(--magenta);--s:24px;left:42%;top:60px"><svg><use href="#st"/></svg></span>
+    <span class="star" style="--c:var(--sky);--s:18px;right:28%;top:110px;--d:-2.5s"><svg><use href="#st"/></svg></span>
+  </div>
+  <div class="wrap">
+    <span class="eyebrow">Take a look inside</span>
+    <h2>Rooms made for <em class="acc">play</em> and learning</h2>
+    <p class="sub">Colourful, clean and safe, with soft floors, little tables and shelves full of toys. These are our real classrooms.</p>
+    <div class="gallery">
+      <figure class="g1"><img src="img/room-lockers.webp" alt="Classroom with orange lockers, a toy shelf and baby play table" loading="lazy"></figure>
+      <figure class="g2"><img src="img/room-board.webp" alt="Classroom with a whiteboard, screen and learning corner" loading="lazy"></figure>
+      <figure class="g3"><img src="img/shelf.webp" alt="Colourful toy shelf and a small green chair" loading="lazy"></figure>
+      <figure class="g4"><img src="img/tables.webp" alt="Bright purple table with green and red chairs" loading="lazy"></figure>
+      <figure class="g5"><img src="img/room-blue.webp" alt="Pink classroom with a blue soft floor and small tables" loading="lazy"></figure>
+      <figure class="g6"><img src="img/toys.webp" alt="Stacking rings and toys on a pink shelf" loading="lazy"></figure>
+      <figure class="g7"><img src="img/room-lilac.webp" alt="Lilac classroom corner with toys and an easel" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap manners">
+    <img src="img/room-blue.webp" alt="Pink classroom with a blue soft floor, small tables and chairs" loading="lazy">
+    <div>
+      <span class="eyebrow">More than ABCs</span>
+      <h2>Good <em class="acc">manners</em>, happy hearts</h2>
+      <p class="sub">Alongside reading and numbers, our children learn how to behave well, speak kindly and manage their feelings.</p>
+      <ul>
+        <li><i>✓</i><span>Saying please, thank you and sorry, every day</span></li>
+        <li><i>✓</i><span>Naming feelings and calming down in healthy ways</span></li>
+        <li><i>✓</i><span>Sharing, taking turns and playing kindly with friends</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews">
+  <span class="star" style="--c:var(--yellow);--s:34px;right:8%;top:60px"><svg><use href="#st"/></svg></span>
+  <span class="star" style="--c:var(--pink);--s:20px;right:20%;top:140px;--d:-2s"><svg><use href="#st"/></svg></span>
+  <div class="wrap">
+    <span class="eyebrow">What parents say</span>
+    <h2>Trusted by families in Adenta</h2>
+    <div class="score"><b>4.8</b><span>★★★★★ · 17 reviews on Google</span></div>
+    <div class="quotes">
+      <blockquote><p>Top notch care for wards and a world class standard tuition, environment and facility. Great school by all standards.</p><cite>Glenn · Google review</cite></blockquote>
+      <blockquote><p>A great and insightful place to send your wards and children.</p><cite>Dominic · Google review</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="enrol">
+  <span class="star" style="--c:var(--lime);--s:24px;left:6%;top:90px"><svg><use href="#st"/></svg></span>
+  <div class="wrap enrol">
+    <div>
+      <span class="eyebrow">Enrol now</span>
+      <h2>Come and <em class="acc">see</em> us</h2>
+      <p class="sub">The best way to choose a school is to visit. Tell us a little about your child and we'll arrange a time.</p>
+      <ol class="steps">
+        <li><div><b>Send the form</b>It opens WhatsApp with your details written out.</div></li>
+        <li><div><b>Visit the school</b>See the classrooms and meet the teachers.</div></li>
+        <li><div><b>Start the journey</b>We guide you through admission, step by step.</div></li>
+      </ol>
+    </div>
+    <form class="req" id="req">
+      <div class="row2">
+        <label>Parent's name<input name="parent" autocomplete="name" required></label>
+        <label>Child's age<select name="age"><option>3 – 12 months</option><option>1 – 2 years</option><option>2 – 3 years</option><option>3 – 4 years</option><option>4 – 6 years</option></select></label>
+      </div>
+      <div class="row2">
+        <label>I'd like to<select name="want"><option>Book a school visit</option><option>Ask about admission</option><option>Ask about fees</option></select></label>
+        <label>Preferred day<input type="date" name="day"></label>
+      </div>
+      <label>Anything we should know? (optional)<textarea name="extra" rows="3" placeholder="Start date, drop-off time, questions…"></textarea></label>
+      <button class="btn" type="submit">Send on WhatsApp</button>
+      <p class="note">Prefer to call? 055 814 4504 or 020 253 3043.</p>
+    </form>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+  <div class="wrap visit">
+    <div>
+      <span class="eyebrow">Find us</span>
+      <h2>Hallelujah Broadway, West Adenta</h2>
+      <div class="hourcard" id="hc"><i></i><span id="ht">Mon – Fri · 6:30 am – 5:30 pm</span></div>
+      <div class="lines">
+        <span>📍 13 Hallelujah Broadway, West Adenta (Madina), Accra</span>
+        <span>📞 <b>055 814 4504</b> · <b>020 253 3043</b></span>
+        <span>✉️ goldenleapschool@gmail.com</span>
+      </div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Golden%20Leap%20School%20Hallelujah%20Broadway%20Madina" target="_blank" rel="noopener">Get directions</a>
+        <a class="btn ghost" href="tel:+233558144504">Call us</a>
+      </div>
+    </div>
+    <img src="img/gate.webp" alt="The Golden Leap School gate with its welcome banners" loading="lazy">
+  </div>
+</section>
+
+<footer><div class="wrap"><img src="img/logo.png" alt="Golden Leap School" width="525" height="474"><span>Golden Leap School · Achieving Excellence Together · West Adenta, Accra</span></div></footer>
+
+<div class="dock">
+  <a class="btn" href="#enrol">Book a visit</a>
+  <a class="btn ghost" href="tel:+233558144504">Call</a>
+</div>
+
+<script>
+(() => {
+  // open status: Mon–Fri 6:30–17:30 (Accra = UTC)
+  const n = new Date(), d = n.getUTCDay(), m = n.getUTCHours() * 60 + n.getUTCMinutes();
+  const open = d >= 1 && d <= 5 && m >= 390 && m < 1050;
+  const hc = document.getElementById('hc');
+  if (open) { hc.classList.add('open'); document.getElementById('ht').textContent = 'Open now · until 5:30 pm'; }
+  else document.getElementById('ht').textContent = 'Closed now · Mon – Fri, 6:30 am – 5:30 pm';
+
+  const f = document.getElementById('req');
+  f.day.min = new Date().toISOString().slice(0, 10);
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+    let msg = 'Hello Golden Leap School! I would like to ' + f.want.value.toLowerCase() + '.\n\nParent: ' + f.parent.value + '\nChild\'s age: ' + f.age.value;
+    if (f.day.value) msg += '\nPreferred day: ' + new Date(f.day.value + 'T00:00').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'short' });
+    if (f.extra.value) msg += '\nNote: ' + f.extra.value;
+    msg += '\n\nThank you!';
+    window.open('https://wa.me/233558144504?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+})();
+</script>
+
+</body>
+</html>
